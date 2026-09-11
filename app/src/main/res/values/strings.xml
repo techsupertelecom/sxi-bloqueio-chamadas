@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">SXI Bloqueio de Chamadas</string>
+    <string name="app_name">SXI Block</string>
     <string name="subtitulo">Bloqueia automaticamente qualquer chamada de numero que nao esteja na sua agenda.</string>
 
     <string name="desprotegido">⚠️ Protecao INATIVA — conclua os passos abaixo</string>
