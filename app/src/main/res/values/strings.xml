@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SXI Bloqueio de Chamadas</string>
+    <string name="subtitulo">Bloqueia automaticamente qualquer chamada de numero que nao esteja na sua agenda.</string>
+
+    <string name="desprotegido">⚠️ Protecao INATIVA — conclua os passos abaixo</string>
+    <string name="protegido">✅ Protecao ATIVA — chamadas fora da agenda serao bloqueadas</string>
+
+    <string name="contatos_ok">✅ Permissao de contatos concedida</string>
+    <string name="contatos_falta">1) Permitir acesso aos contatos (para saber quem esta na agenda)</string>
+    <string name="btn_contatos">Permitir contatos</string>
+
+    <string name="triador_ok">✅ App definido como triador de chamadas</string>
+    <string name="triador_falta">2) Definir este app como \"triador de chamadas\" do sistema</string>
+    <string name="btn_ativar">Ativar bloqueio</string>
+
+    <string name="btn_config">Abrir configuracoes do app</string>
+    <string name="rodape">SXI Tecnologia • store.sxi.com.br</string>
+</resources>
