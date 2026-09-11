@@ -3,6 +3,8 @@
 
     <!-- Necessaria para verificar se o numero da chamada esta na agenda -->
     <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <!-- Necessaria para disparar o webhook (POST) quando bloquear uma chamada -->
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -10,6 +12,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
+        android:usesCleartextTraffic="true"
         android:theme="@style/Theme.SxiBloqueio">
 
         <activity

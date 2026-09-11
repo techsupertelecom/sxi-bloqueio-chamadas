@@ -15,5 +15,17 @@
     <string name="btn_ativar">Ativar bloqueio</string>
 
     <string name="btn_config">Abrir configuracoes do app</string>
+
+    <string name="webhook_titulo">🔗 Webhook (opcional)</string>
+    <string name="webhook_desc">Sempre que uma chamada for bloqueada, o app envia um POST (JSON) para esta URL. Deixe em branco para desativar.</string>
+    <string name="webhook_hint">https://sua-url.com/webhook</string>
+    <string name="webhook_salvar">Salvar webhook</string>
+    <string name="webhook_testar">Enviar teste</string>
+    <string name="webhook_salvo">✅ Webhook salvo</string>
+    <string name="webhook_limpo">Webhook removido</string>
+    <string name="webhook_invalido">URL invalida (use http:// ou https://)</string>
+    <string name="webhook_teste_enviado">Teste enviado — verifique o destino</string>
+    <string name="webhook_sem_url">Cadastre uma URL antes de testar</string>
+
     <string name="rodape">SXI Tecnologia • store.sxi.com.br</string>
 </resources>

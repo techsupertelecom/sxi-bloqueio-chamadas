@@ -75,6 +75,57 @@
             android:layout_marginTop="8dp"
             android:text="@string/btn_ativar" />
 
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="28dp"
+            android:background="#1E2A22" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/webhook_titulo"
+            android:textColor="#2EE06A"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/webhook_desc"
+            android:textColor="#8AA294"
+            android:textSize="13sp" />
+
+        <EditText
+            android:id="@+id/etWebhook"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:autofillHints="url"
+            android:background="#101A13"
+            android:hint="@string/webhook_hint"
+            android:inputType="textUri"
+            android:padding="14dp"
+            android:textColor="#E9F5EC"
+            android:textColorHint="#5C7266"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/btnSalvarWebhook"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/webhook_salvar" />
+
+        <Button
+            android:id="@+id/btnTestarWebhook"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/webhook_testar" />
+
         <Button
             android:id="@+id/btnConfig"
             android:layout_width="match_parent"

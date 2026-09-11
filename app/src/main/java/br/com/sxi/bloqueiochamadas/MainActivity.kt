@@ -8,6 +8,8 @@ import android.net.Uri
 import android.os.Build
 import android.os.Bundle
 import android.provider.Settings
+import android.util.Patterns
+import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
@@ -46,7 +48,39 @@ class MainActivity : AppCompatActivity() {
                 )
             )
         }
+
+        // ---- Webhook ----
+        binding.etWebhook.setText(Prefs.getWebhookUrl(this) ?: "")
+
+        binding.btnSalvarWebhook.setOnClickListener {
+            val url = binding.etWebhook.text.toString().trim()
+            when {
+                url.isEmpty() -> {
+                    Prefs.setWebhookUrl(this, "")
+                    toast(getString(R.string.webhook_limpo))
+                }
+                Patterns.WEB_URL.matcher(url).matches() &&
+                    (url.startsWith("http://") || url.startsWith("https://")) -> {
+                    Prefs.setWebhookUrl(this, url)
+                    toast(getString(R.string.webhook_salvo))
+                }
+                else -> toast(getString(R.string.webhook_invalido))
+            }
+        }
+
+        binding.btnTestarWebhook.setOnClickListener {
+            val url = binding.etWebhook.text.toString().trim()
+            if (url.isEmpty()) {
+                toast(getString(R.string.webhook_sem_url))
+            } else {
+                WebhookNotifier.notifyBlocked(url, "+5511999999999", "TESTE SXI")
+                toast(getString(R.string.webhook_teste_enviado))
+            }
+        }
     }
+
+    private fun toast(msg: String) =
+        Toast.makeText(this, msg, Toast.LENGTH_SHORT).show()
 
     override fun onResume() {
         super.onResume()

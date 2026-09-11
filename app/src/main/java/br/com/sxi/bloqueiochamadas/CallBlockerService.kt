@@ -38,6 +38,9 @@ class CallBlockerService : CallScreeningService() {
             response.setRejectCall(true)      // encerra a chamada (como recusar)
             response.setSkipCallLog(false)    // mantem no historico de chamadas
             response.setSkipNotification(true) // nao mostra notificacao de chamada perdida
+
+            // Se houver um webhook cadastrado, dispara um POST avisando do bloqueio
+            WebhookNotifier.notifyBlocked(Prefs.getWebhookUrl(this), number, null)
         }
 
         respondToCall(callDetails, response.build())
